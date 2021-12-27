@@ -102,9 +102,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Amanda Gu"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
+  bio              : "Hello, fancy meeting you here."
   location         : "Somewhere"
   email            :
   links:
