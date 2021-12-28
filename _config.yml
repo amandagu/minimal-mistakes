@@ -104,8 +104,8 @@ analytics:
 author:
   name             : "Amanda Gu"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Welcome to my e-home!"
-  location         : "Whistler | Montréal"
+  bio              : "I am an **amazing** person."
+  location         : "Somewhere"
   email            :
   links:
     - label: "Email"
