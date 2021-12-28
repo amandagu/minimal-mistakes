@@ -26,7 +26,7 @@ baseurl                  : ""
 repository               : "amandagu/amandagu.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : "Amanda's 's Quarter Life Crisis"
+masthead_title           : "Amanda's Quarter Life Crisis"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -110,7 +110,7 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
+      url: "mailto:gu.amanda914@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
