@@ -23,10 +23,10 @@ name                     : "Amanda Gu"
 description              : "An amazing website."
 url                      : "https://amandagu.github.io/"
 baseurl                  : "https://amandagu.github.io/"
-repository               : amandagu/amandagu.github.io/"
+repository               : "amandagu/amandagu.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
+masthead_title           : "Amanda Gu"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -102,7 +102,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Your name"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am an **amazing** person."
   location         : "Somewhere"
