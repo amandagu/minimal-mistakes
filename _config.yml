@@ -18,15 +18,15 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 locale                   : "en-US"
 title                    : "Amanda Gu"
 title_separator          : "-"
-subtitle                 : "A travel, math, and book blog."
+subtitle                 : "Math. Books. Travel. Other Stuff."
 name                     : "Amanda Gu"
-description              : "A travel, math, and book blog."
+description              : 
 url                      : "https://amandagu.github.io/"
 baseurl                  : ""
 repository               : "amandagu/amandagu.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : "Amanda's Quarter Life Crisis"
+masthead_title           : "Amanda Gu"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
