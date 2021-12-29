@@ -24,7 +24,14 @@ excerpt_separator: "<!--more-->"
 Compressive sensing (also known as compressed sensing) is a method used to solve sparse, 
 underdetermined matrix systems which was developped around 2004. Let's unpack that sentence
 with an example.
+$$
+\begin{align*}
+2x + y &= 5\\
+2x + y + z =8
+\end{align*}
+$$
 In this case, we have 3 unknowns and 2 equations, so the system is <i>underdetermined</i>: there
 are more unknowns than equations. This poses a problem for traditional solving techniques 
 because, as you might recall from middle school, you at least the same number of independent 
-equations as you have variables. 
+equations as you have variables. In this case, we can quickly check that this is indeed true. 
+We obtain a <i>family</i> of solutions, or a set of multiple solutions. We have that
