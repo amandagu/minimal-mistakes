@@ -10,7 +10,7 @@ hidden: true
 excerpt_separator: "<!--more-->"
 ---
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-<i>This is blog post is a summary of research that I did under the supervision of 
+<i>This blog post is a summary of research that I did under the supervision of 
   <a href="https://www.pedersenfisherieslab.com/">Dr. Eric Pedersen</a> and 
   <a href="https://sites.google.com/view/paglia/home?authuser=0">Dr. Simone Brugiapaglia</a> 
   in 2020 as part of research course. Their guidance and kindness in such wild times was 
@@ -27,11 +27,48 @@ with an example.
 $$
 \begin{align*}
 2x + y &= 5\\
-2x + y + z =8
+2x + y + z &=8
 \end{align*}
 $$
-In this case, we have 3 unknowns and 2 equations, so the system is <i>underdetermined</i>: there
-are more unknowns than equations. This poses a problem for traditional solving techniques 
-because, as you might recall from middle school, you at least the same number of independent 
-equations as you have variables. In this case, we can quickly check that this is indeed true. 
-We obtain a <i>family</i> of solutions, or a set of multiple solutions. We have that
+In this system of equations, we have 3 unknowns and 2 equations, so the system is 
+<i>underdetermined</i>: there are more unknowns than equations. This poses a problem for 
+traditional solving techniques because, as you might recall, you at least the same number 
+of independent equations as you have variables. In this case, we can quickly check that this 
+is indeed true. We obtain a <i>family</i> of solutions, or a set of multiple solutions. We 
+know that $z=3$, but any combination of $x, y$ works, so long as $2x +y = 5$. Another way of 
+stating this is that any point on the line $y=-2x+5$ solves the system. If this system was all the 
+information we had, we'd be at a standstill. However, we have one more condition: sparsity. 
+All sparsity says is that a significant number of the variables have a value of zero. How many? 
+No idea. Which ones? We don't know. Unfortunately, there's not even a definition of exactly 
+what proportion of the variables need to be zero for a system to be sparse. Even still, with 
+this condition of sparsity, we can solve this underdetermined matrix system<sup>(1)</sup>. 
+Just as a refresher, the above system can be written in the following way using matrices.
+$$
+\begin{matrix}
+2 & 1 & 0\\
+2 & 1 & 1
+\end{matrix}
+\times 	
+\begin{matrix}
+x\\
+y\\
+z
+\end{matrix}
+=
+\begin{matrix}
+5\\
+8
+\end{matrix}
+$$
+<br>
+<br>
+This technique has a lot of uses outside of ecology. As you can imagine, the idea of recovering 
+the more information with fewer equations or samples has obvious applications in information 
+theory: the science of how we store, compress, and restore information.
+<hr>
+(1) The keen ones of you out there might say: but wait, we could just solve this equation by 
+hand now that we know that $x$ or $y$ is $0$, and you're right, it's quite trivial in this 
+toy example. However, less trivial when you're working with hundreds of variables, and you 
+have no idea which ones or how many are zero. The example is merely to illustrate the technique and 
+unfortunately isn't a perfect showcase of the power of compressive sensing. Bear with me, 
+it gets more exciting soon.
