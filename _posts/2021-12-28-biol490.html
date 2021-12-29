@@ -78,9 +78,9 @@ This way of measuring is called the $\ell_2$ norm.
 Now, like two different boxes might have the same value by a given measure (like the same volume), 
 but be different sizes, different points also can have the same value under a given norm. 
 For example, $(0,1)$, $(1,0)$, $(0.75,-0.25)$, and $(-0.5, -0.5)$ all have the same $\ell_1$ norm.
-
+<br>
 {% raw %}<img src="/assets/images/LnormsUnitBalls.jpg" alt="">{% endraw %}
-Figure 1: The unit ball of the $\ell_1$ (in red) and $\ell_2$ norms (in blue). The unit "ball" 
+<br><strong>Figure 1<\strong>: The unit ball of the $\ell_1$ (in red) and $\ell_2$ norms (in blue). The unit "ball" 
 is all the points that have a value of 1 for a given norm. Yes, it is called a unit ball even 
 when it is very pointy.
 <br>
@@ -92,13 +92,33 @@ at 0), as we can see in the image above.
 <br>
 Now, why we took that digression into measure theory is because of the way compressive sensing 
 chooses one answer from a whole sample space of answers. The final answer given is the answer 
-in the sample space with <i>the smallest </i>$\ell_1$<i> norm</i>.
-
+in the sample space with <i>the smallest </i>$\ell_1$<i> norm</i>. When we find the smallest 
+solution in the $\ell_1$ norm, we are, in effect, asking what is the smallest diamond that 
+touches the line of solutions, and where on the line do they touch? Because of the diamond shape
+of the unit ball in the $\ell_1$ norm, the smallest diamond that touches the sample space 
+will almost certainly touch the line at one of its points. Its points also happen to be on 
+the axes, which means that at least one of the variables is 0. We can compare this to the 
+$\ell_2$ norm again. The smallest circle by contrast, does not intersect the sample space along 
+an axis, and therefore does not give a sparse solution.
+<br>
+{% raw %}<img src="/assets/images/intersectionOfSampleSpace.jpg" alt="">{% endraw %}
+<br><strong>Figure 2<\strong>: The points with the minimum $\ell_1$ (in red) and $\ell_2$ norm values in 
+  our sample space (in green).
+<br>
+<br>
+This extends into even higher dimensions. In three dimensions, we would have a plane of solutions 
+instead of a line, and the unit "ball" in $\ell_1$, instead of being a diamond, would be a 
+tetrahedron. In 4D and up, it gets impossible to visualize, but the math still holds.
+<br>
+<br>
 This technique has a lot of uses outside of ecology. As you can imagine, the idea of recovering 
 the more information with fewer equations or samples has obvious applications in information 
 theory: the science of how we store, compress, and restore information.
+
+<h3>The Ecology Connection</h3>
+
 <hr>
-(1) The keen ones of you out there might say: but wait, we could just solve this equation by 
+(1) The exceptionally keen ones of you out there might say: but wait, we could just solve this equation by 
 hand now that we know that $ x $ or $ y $ is $ 0 $, and you're right, it's quite trivial in this 
 toy example. However, less trivial when you're working with hundreds of variables, and you 
 have no idea which ones or how many are zero. The example is merely to illustrate the technique and 
