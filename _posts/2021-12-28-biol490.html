@@ -38,8 +38,7 @@ know that $ z=3 $, but any combination of $ x, y $ works, so long as $ 2x +y = 5
 stating this is that any point on the line $ y=-2x+5 $ solves the system. If this system was all the 
 information we had, we'd be at a standstill. However, we have one more condition: sparsity. 
 All sparsity says is that a significant number of the variables have a value of zero. How many? 
-No idea. Which ones? We don't know. Unfortunately, there's not even a definition of exactly 
-what proportion of the variables need to be zero for a system to be sparse. Even still, with 
+No idea. Which ones? We don't know. Even still, with 
 this condition of sparsity, we can solve this underdetermined matrix system<sup>(1)</sup>. 
 Just as a refresher, the above system can be written in the following way using matrices.
 $$
@@ -59,7 +58,23 @@ z
 8
 \end{pmatrix}
 $$
-So how do we (or a computer) pick a sparse solution from this family of possible solutions?
+So how do we (or a computer) pick a sparse solution from the <i>sample space</i> of possible 
+solutions? For that, we turn to measure theory. Measure theory is a branch of mathematics 
+that concerns itself with ways we can measure real things and mathematical objects, 
+the properties of measures, and why all of that matters in the first place. Say you're handed a 
+box and given the instructions "measure it". A very reasonable first question would be how? Do you 
+want the volume? The height? The surface area? The mass? We'd pick a <i>measure</i> depending 
+on why we want to measure the box. If we're trying to paint it, we'd pick surface area. 
+If we want to see if it would fit under my bed, we'd pick height, etc. 
+<br>
+<br>
+Just as we can measure real things, like a box, in different ways, we can also measure a solution to 
+our system. Recall that any point on the line $ y=-2x+5 $ is a solution, so when I say 
+a solution, I mean a point on that line such as $(2, 1)$ or $(-1, 7)$. Now, if we wanted to 
+"measure" the point $(2, 1)$ we could use the sum of the $x$ and $y$ variables to obtain a value 
+of $2+1=3$. This method is called the $\ell_1$ norm <sup>(2)</sup>. We could also measure it by its 
+distance to the origin, or the Euclidean norm, by taking $\sqrt{x^2+y^2}=\sqrt{4+1}=\sqrt{5}$. 
+
 <br>
 <br>
 This technique has a lot of uses outside of ecology. As you can imagine, the idea of recovering 
@@ -72,3 +87,7 @@ toy example. However, less trivial when you're working with hundreds of variable
 have no idea which ones or how many are zero. The example is merely to illustrate the technique and 
 unfortunately isn't a perfect showcase of the power of compressive sensing. Bear with me, 
 it gets more exciting soon.
+<br>
+<br>
+(2) I've skipped over a lot of (all of) the nuance between norms and measures. 
+Forgive me analysis gods.
