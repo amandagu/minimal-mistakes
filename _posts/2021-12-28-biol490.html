@@ -71,12 +71,29 @@ If we want to see if it would fit under my bed, we'd pick height, etc.
 Just as we can measure real things, like a box, in different ways, we can also measure a solution to 
 our system. Recall that any point on the line $ y=-2x+5 $ is a solution, so when I say 
 a solution, I mean a point on that line such as $(2, 1)$ or $(-1, 7)$. Now, if we wanted to 
-"measure" the point $(2, 1)$ we could use the sum of the $x$ and $y$ variables to obtain a value 
+"measure" the point $(2, 1)$ we could use the sum of the absolute values of the $x$ and $y$ variables to obtain a value 
 of $2+1=3$. This method is called the $\ell_1$ norm <sup>(2)</sup>. We could also measure it by its 
 distance to the origin, or the Euclidean norm, by taking $\sqrt{x^2+y^2}=\sqrt{4+1}=\sqrt{5}$. 
+This way of measuring is called the $\ell_2$ norm.
+Now, like two different boxes might have the same value by a given measure (like the same volume), 
+but be different sizes, different points also can have the same value under a given norm. 
+For example, $(0,1)$, $(1,0)$, $(0.75,-0.25)$, and $(-0.5, -0.5)$ all have the same $\ell_1$ norm.
 
+{% raw %}<img src="{{ site.url }}{{ site.baseurl }}/assets/images/LnormsUnitBalls.jpg" alt="">{% endraw %}
+Figure 1: The unit ball of the $\ell_1$ (in red) and $\ell_2$ norms (in blue). The unit "ball" 
+is all the points that have a value of 1 for a given norm. Yes, it is called a unit ball even 
+when it is very pointy.
 <br>
 <br>
+In the $\ell_1$ norm, all of the points with the same value make a diamond shape, and in the 
+$\ell_2$ norm, all of the points with the same value make a circle (both of which are centred 
+at 0), as we can see in the image above.
+<br>
+<br>
+Now, why we took that digression into measure theory is because of the way compressive sensing 
+chooses one answer from a whole sample space of answers. The final answer given is the answer 
+in the sample space with <i>the smallest </i>$\ell_1$<i> norm</i>.
+
 This technique has a lot of uses outside of ecology. As you can imagine, the idea of recovering 
 the more information with fewer equations or samples has obvious applications in information 
 theory: the science of how we store, compress, and restore information.
@@ -89,5 +106,5 @@ unfortunately isn't a perfect showcase of the power of compressive sensing. Bear
 it gets more exciting soon.
 <br>
 <br>
-(2) I've skipped over a lot of (all of) the nuance between norms and measures. 
+(2) I've skipped over a lot of (all of) the nuance of norms and measures. They are different. 
 Forgive me analysis gods.
