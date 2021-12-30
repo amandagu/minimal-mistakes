@@ -17,7 +17,8 @@ excerpt_separator: "<!--more-->"
   full report can be found <a href ="/assets/pdfs/AmandaGuBiol490Fall2020.pdf">here</a>. 
   This summary is intended to be (hopefully) readable to people with no background in ecology, 
   some familiarity with mathematics, and a general scientific literacy, ie. all my non-math 
-  friends who keep asking what I actually do.</i>
+  friends who keep asking what I actually do and aren't satisfied with a vague "I use math 
+  to predict eco-systems".</i>
 <br>
 <h3>Compressive Sensing 101</h3>
 Compressive sensing (also known as compressed sensing) is a method used to solve sparse, 
@@ -116,8 +117,40 @@ the more information with fewer equations or samples has obvious applications in
 theory: the science of how we store, compress, and restore information.
 
 <h3>The Ecology Connection</h3>
-
+One of the key questions in ecology is how populations of various species will change and effect 
+each other over time. One of the oldest and most common ways of representing these relations 
+is the Lotka-Volterra equations, which are pairs of first-order nonlinear differentiable equations.
+$$
+\begin{align*}
+\frac{dx}{dt}&=\alpha x - \beta xy\\
+\frac{dy}{dt}&=\delta xy - \gamma y
+\end{align*}
+$$
+All the above Lotka-Volterra equations say is that the rate of change of species $x$, the prey, 
+is determined by how fast the prey population would grow if left to its own devices (the $\alpha x$ 
+term), subtracted by the rate of predation, which depends on the current level of predator and 
+prey populations (the $\beta xy$ term). By contrast, the rate that the predator 
+population increases depends on how much prey they catch (the $\delta xy$ term) and decreases 
+in the absence of the prey species (the $\gamma y$ term). The spirit of my project is whether or 
+not compressive sensing is useful to figure out the values of $\alpha, \beta,\delta,\gamma$. In 
+a real ecosystem model, we'd have two unknown variables for every single pair of species, 
+one term for the effect each species has on every other species. This is lots of variables, 
+but it is a sound assumption that the matrix of all these coefficients is sparse, as most species 
+don't really effect each other unless they are directly in competition or have a 
+predator-prey relationship. 
+<br>
+<br>
+The nature of the data is difficult, as often ecologists are lucky enough to have population data 
+for all species, and not over long periods of time either. As such, techniques like compressive 
+sensing are incredibly promising because they require fewer input datapoints/equations to predict 
+the coefficients and therefore the ecosystem. My research mostly concerns how we can massage 
+ecological data into a form that we can use compressive sensing on and how efficient it is at 
+recovering the underlying dynamics (the coefficients and equations) using only population data.
+<br>
+<br>
+I thought it was pretty neat. I hope you do too.
 <hr>
+<small>
 (1) The exceptionally keen ones of you out there might say: but wait, we could just solve this equation by 
 hand now that we know that $ x $ or $ y $ is $ 0 $, and you're right, it's quite trivial in this 
 toy example. However, less trivial when you're working with hundreds of variables, and you 
@@ -127,4 +160,4 @@ it gets more exciting soon.
 <br>
 <br>
 (2) I've skipped over a lot of (all of) the nuance of norms and measures. They are different. 
-Forgive me analysis gods.
+Forgive me analysis gods.</small>>
